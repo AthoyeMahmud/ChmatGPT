@@ -3,11 +3,13 @@ from groq import Groq
 import json
 import time
 from datetime import datetime
+import os
 
-# Constants
-API_KEY = "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"
+# Muh Secrets 
+api_key = st.secrets["api_keys"]["my_api_key"]
+st.write("API Key:", api_key)
 
-# Initialize the Groq Client
+# Initialize Groq
 client = Groq(api_key=API_KEY)
 
 # Initialize Session State
